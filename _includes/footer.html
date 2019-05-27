@@ -1,5 +1,5 @@
 <footer class="site-footer h-card">
-  <data class="u-url" href="{{ "/" | relative_url }}"></data>
+  <!-- <data class="u-url" href="{{ "/" | relative_url }}"></data>
 
   <div class="wrapper">
 
@@ -30,6 +30,17 @@
       </div>
     </div>
 
-  </div>
+  </div> -->
+
+
+  <footer class="footer">
+      <div class="container">
+        <span class="col text-muted">{{ site.title | escape }}</span>
+        {%- if site.email -%}
+        <span class="col"><a href="mailto:{{ site.email }}">{{ site.email }}</a></span>
+        {%- endif -%}
+
+      </div>
+    </footer>
 
 </footer>

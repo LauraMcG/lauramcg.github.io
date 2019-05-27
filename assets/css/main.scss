@@ -1,0 +1,56 @@
+---
+---
+
+@import 'bootstrap/scss/bootstrap';
+
+$font-family-base: 'Roboto Mono', monospace;
+$indigo: papayawhip;
+
+.svg-drips {
+	width: 100%;
+	padding: 0px;
+	margin: 0px;
+	z-index: -10;
+}
+
+.drip {fill: url(#TheGradient);}
+
+.content-box {
+	background-color:  rgba(248, 239, 222, 0.80);
+	padding: 1rem 2rem;
+	margin: 1rem auto;
+	box-shadow: .25rem .25rem 0rem  rgba(0, 0, 0, 0.5);
+	text-shadow: none;
+}
+
+.welcome-text {
+	// z-index: 10;
+	position: absolute;
+	top: 3rem;
+	left: 3rem;
+	vertical-align: right;
+	// background-color:  rgba(248, 239, 222, 0.74);
+	// padding: 1rem 2rem;
+    // box-shadow: .25rem .25rem 0rem  rgba(0, 0, 0, 0.5);
+    // font-family: 'Roboto Mono', monospace;
+	text-shadow: none;
+}
+
+/* Sticky footer styles for bootstrap */
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    margin-bottom: 45px; /* Margin bottom by footer height */
+}
+.footer {
+	background-color: papayawhip;
+    position: absolute;
+    padding-top: map-get($spacers, 3);
+    bottom: 0;
+    width: 100%;
+    height: map-get($spacers, 5); /* Set the fixed height of the footer here */
+    line-height: map-get($spacers, 3); /* Vertically center the text there */
+}

@@ -3,7 +3,10 @@
 
 @import 'bootstrap/scss/bootstrap';
 
+$font-family-sans-serif: 'Roboto Mono', monospace, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+$font-family-monospace: 'Roboto Mono', monospace;
 $font-family-base: 'Roboto Mono', monospace;
+
 $indigo: papayawhip;
 
 .svg-drips {
@@ -16,24 +19,19 @@ $indigo: papayawhip;
 .drip {fill: url(#TheGradient);}
 
 .content-box {
-	background-color:  rgba(248, 239, 222, 0.80);
+	background-color:  rgba(248, 239, 222, 0.90);
 	padding: 1rem 2rem;
 	margin: 1rem auto;
 	box-shadow: .25rem .25rem 0rem  rgba(0, 0, 0, 0.5);
-	text-shadow: none;
+	z-index: 1;
+	font-family: $font-family-base;
 }
 
 .welcome-text {
-	// z-index: 10;
 	position: absolute;
 	top: 3rem;
 	left: 3rem;
 	vertical-align: right;
-	// background-color:  rgba(248, 239, 222, 0.74);
-	// padding: 1rem 2rem;
-    // box-shadow: .25rem .25rem 0rem  rgba(0, 0, 0, 0.5);
-    // font-family: 'Roboto Mono', monospace;
-	text-shadow: none;
 }
 
 /* Sticky footer styles for bootstrap */
@@ -43,10 +41,10 @@ html {
 }
 
 body {
-    margin-bottom: 45px; /* Margin bottom by footer height */
+	margin-bottom: 45px; /* Margin bottom by footer height */
+	background-image: linear-gradient(#FF91AF, aliceblue);
 }
 .footer {
-	background-color: papayawhip;
     position: absolute;
     padding-top: map-get($spacers, 3);
     bottom: 0;

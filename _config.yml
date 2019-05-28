@@ -32,6 +32,20 @@ sass:
   sass_dir: assets/css
   style: compressed
 
+collections_dir: collections
+
+collections:
+  projects:
+    output: true
+  
+# defaults:
+#   - scope:
+#       path: ""
+#       type: "courses"
+#     values:
+#       layout: "detail"
+#       permalink: /resources/teaching/:name.html
+
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.

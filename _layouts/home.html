@@ -2,17 +2,18 @@
 layout: default
 ---
 
-<div class="home">
+<div class="content-box">
   {%- if page.title -%}
     <h1 class="page-heading">{{ page.title }}</h1>
   {%- endif -%}
 
   {{ content }}
-
+</div>
   {%- if site.posts.size > 0 -%}
-    <h2 class="post-list-heading">{{ page.list_title | default: "Posts" }}</h2>
-    <ul class="post-list">
+    <h2 class=" content-box post-list-heading">{{ page.list_title | default: "Posts" }}</h2>
+    <ul class="list-unstyled">
       {%- for post in site.posts -%}
+      <div class="content-box">
       <li>
         {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
         <span class="post-meta">{{ post.date | date: date_format }}</span>
@@ -25,9 +26,26 @@ layout: default
           {{ post.excerpt }}
         {%- endif -%}
       </li>
+    </div>
       {%- endfor -%}
     </ul>
 
   {%- endif -%}
+
+  <!-- {%- if site.projects.size > 0 -%} -->
+    <!-- <h2 class=" content-box post-list-heading">{{ projects.list_title | default: "Projects" }}</h2>
+    <ul class="list-unstyled">
+      {%- for project in site.projects -%}
+      <div class="content-box">
+      <li>
+            {{ project.title | escape }}
+          
+      </li>
+    </div>
+      {%- endfor -%}
+    </ul> -->
+
+  <!-- {%- endif -%} -->
+
 
 </div>
